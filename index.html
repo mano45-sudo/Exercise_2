@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance Marking System</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    button {
+      padding: 15px 40px;
+      font-size: 20px;
+    }
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="presentBtn">Mark Present</button>
+  <button id="absentBtn">Mark Absent</button>
+
+  <p id="presentCount">Total Present: 0</p>
+  <p id="absentCount">Total Absent: 0</p>
+
+  <script>
+    let present = 0
+    let absent = 0
+
+    document.getElementById("presentBtn").onclick = function () {
+      present++
+      document.getElementById("presentCount").innerText = "Total Present: " + present
+    }
+
+    document.getElementById("absentBtn").onclick = function () {
+      absent++
+      document.getElementById("absentCount").innerText = "Total Absent: " + absent
+    }
+  </script>
+</body>
+</html>
